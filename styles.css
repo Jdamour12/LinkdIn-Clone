@@ -44,10 +44,25 @@ a {
     font-size: 14px;
     margin: 5px 8px;
     padding-right: 5px;
+    position: relative;
 }
 
 .navbar-center ul li a img{
     width: 30px;
+}
+
+.navbar-center ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #045be6;
+    position: absolute;
+    bottom: -15px;
+    transition: width 0.3s;
+}
+
+.navbar-center ul li a:hover::after {
+    width: 100%;
 }
 
 .nav-profile-img {
@@ -66,7 +81,7 @@ a {
     content: '';
     width: 7px;
     height: 7px;
-    border: 2px solid #000;
+    border: 2px solid #e7e2e2;
     border-radius: 50%;
     right: 0px;
     top: 0;
